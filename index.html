@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Changing Button</title>
+  <style>
+    #colorButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="colorButton" onclick="changeColor()">Click Me</button>
+
+  <script>
+    function changeColor() {
+      const button = document.getElementById('colorButton');
+      if (button.style.backgroundColor === 'rgb(76, 175, 80)') {
+        button.style.backgroundColor = '#FF5733';
+      } else {
+        button.style.backgroundColor = '#4CAF50';
+      }
+    }
+    const now = new Date();
+      const hours = now.getHours();
+      let greeting;
+
+      if (hours < 12) {
+        greeting = "Good morning!";
+      } else if (hours < 18) {
+        greeting = "Good afternoon!";
+      } else {
+        greeting = "Good evening!";
+      }
+
+      alert(greeting);
+  </script>
+
+</body>
+</html>
